@@ -10,19 +10,79 @@
 		"Other"
 	],
 	"activationEvents": [
+		"onCommand:lighthouse.call",
 		"onCommand:lighthouse.on",
-		"onCommand:lighthouse.off"
+		"onCommand:lighthouse.id.on",
+		"onCommand:lighthouse.off",
+		"onCommand:lighthouse.id.off",
+		"onCommand:lighthouse.state",
+		"onCommand:lighthouse.id.state",
+		"onCommand:lighthouse.bri",
+		"onCommand:lighthouse.id.bri",
+		"onCommand:lighthouse.color",
+		"onCommand:lighthouse.id.color",
+		"onCommand:lighthouse.loop",
+		"onCommand:lighthouse.id.loop",
+		"onCommand:lighthouse.info"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
+				"command": "lighthouse.call",
+				"title": "Lighthouse: Call"
+			},
+			{
 				"command": "lighthouse.on",
-				"title": "Activate Hue Lights"
+				"title": "Lighthouse: Turn on all lights"
+			},
+			{
+				"command": "lighthouse.id.on",
+				"title": "Lighthouse: Turn on lights by IDs"
 			},
 			{
 				"command": "lighthouse.off",
-				"title": "Deactivate Hue Lights"
+				"title": "Lighthouse: Turn off all lights"
+			},
+			{
+				"command": "lighthouse.id.off",
+				"title": "Lighthouse: Turn off lights by IDs"
+			},
+			{
+				"command": "lighthouse.state",
+				"title": "Lighthouse: Send STATE string"
+			},
+			{
+				"command": "lighthouse.id.state",
+				"title": "Lighthouse: Send STATE string to IDs."
+			},
+			{
+				"command": "lighthouse.bri",
+				"title": "Lighthouse: Send BRI val as brightness"
+			},
+			{
+				"command": "lighthouse.id.bri",
+				"title": "Lighthouse: Send BRI val as brightness to IDS."
+			},
+			{
+				"command": "lighthouse.color",
+				"title": "Lighthouse: Send hexcode of COLOR"
+			},
+			{
+				"command": "lighthouse.id.color",
+				"title": "Lighthouse: Send hexcode of COLOR to IDs"
+			},
+			{
+				"command": "lighthouse.loop",
+				"title": "Lighthouse: Put all lights in a colorloop"
+			},
+			{
+				"command": "lighthouse.id.loop",
+				"title": "Lighthouse: Put lights in a colorloop by IDs"
+			},
+			{
+				"command": "lighthouse.info",
+				"title": "Lighthouse: Info"
 			}
 		]
 	},
